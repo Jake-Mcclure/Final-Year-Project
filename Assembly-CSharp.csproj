@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4F79A5CA-2368-FB15-F08A-B389BF30D20A}</ProjectGuid>
+    <ProjectGuid>{D4449299-0FF9-9029-A487-6D2CB1CBA1B9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,11 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Player_Controller.cs" />
-    <Compile Include="Assets\Scripts\Game_Controller.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
+    <Compile Include="Assets\Scripts\Player_Controller.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\CheckpointController.cs" />
+    <Compile Include="Assets\Scripts\Game_Controller.cs" />
+    <Compile Include="Assets\Scripts\AIController.cs" />
+    <Compile Include="Assets\Scripts\TheNetwork.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
