@@ -2,23 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheNetwork : MonoBehaviour
+public class TheNetwork 
 {
 
-    float[] m_Hiddenlayer;
+    public float[] m_Hiddenlayer;
     float[][] m_HiddenLWeights;
     float[] m_HiddenLBias;
 
-    int m_Inputs;
+    public int m_Inputs;
 
     float[] m_OutputWeights;
     float m_OutputBias;
 
-    float m_Ability;
+    public float m_Ability;
+
+    public TheNetwork()
+    {
+
+    }
 
     public TheNetwork(int inputs, int Hiddennodes)
     {
         m_Hiddenlayer = new float[Hiddennodes];
+        InitialiseWeights(inputs);
         m_Inputs = inputs;
 
     }

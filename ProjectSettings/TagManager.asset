@@ -7,6 +7,9 @@ TagManager:
   - Wall
   - Start
   - LapEnd
+  - Attempts
+  - Alive
+  - Dead
   layers:
   - Default
   - TransparentFX
