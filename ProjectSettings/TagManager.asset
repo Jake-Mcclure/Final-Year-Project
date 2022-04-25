@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Start
+  - LapEnd
   layers:
   - Default
   - TransparentFX
