@@ -8,8 +8,8 @@ public enum Method {Random, Slice}
 public class Game_Controller : MonoBehaviour
 {
 
-    private List<AIController> m_CurrentAICont;
-    public List<AIController> m_AllAICont;
+    private List<AIController> m_CurrentAICont = new List<AIController>();
+    public List<AIController> m_AllAICont = new List<AIController>();
     private AIController m_AICont;
 
     public Method m_method= Method.Slice;
@@ -29,9 +29,48 @@ public class Game_Controller : MonoBehaviour
     private int Generation = 0;
     public int Attempts = 12;
 
-    public void SpawnAi(int amount)
+    private void Start()
+    {
+        Debug.Log("Started Game Controller");
+        
+        m_InitialData = new float[Attempts][];
+        m_InitialString = new string[Attempts];
+        for (int i = 0; i < m_InitialData.Length; i++)
+        {
+            m_InitialData[i] = new float[29];
+        }
+        Debug.Log(Attempts + " " + m_InitialData.Length);
+        RandomDay();
+        NewGeneration();
+    }
+
+    private void Update()
     {
 
+        bool IsActive = m_AllAICont.Count > 0;
+
+        if (IsActive)
+        {
+
+        }
+
+    }
+
+    void RandomDay()
+    {
+        Debug.Log("RandomDay called");
+        for (int i = 0; i < m_InitialData.Length; i++)
+        {
+            for (int x = 0; x < m_InitialData[i].Length; x++)
+            {
+                m_InitialData[i][x] = Random.Range(-4, 4);
+            }
+        }
+    }
+
+    public void SpawnAi(int amount)
+    {
+        Debug.Log("Spawn AI called");
         for (int i = 0; i < amount; i++)
         {
             AIController car = Instantiate(m_Car).GetComponent<AIController>();
@@ -47,11 +86,15 @@ public class Game_Controller : MonoBehaviour
 
         m_CurrentAICont.Clear();
 
-        m_CurrentAICont = m_AllAICont;
+        for (int i = 0; i < m_AllAICont.Count; i++)
+        {
+            m_CurrentAICont.Add(m_AllAICont[i]);
+        }
     }
     
     public void RestartAI(int amount)
     {
+        Debug.Log("Restart AI called");
         GameObject[] deadAI = GameObject.FindGameObjectsWithTag("Dead");
 
         for (int i = 0; i < amount; i++)
@@ -222,6 +265,7 @@ public class Game_Controller : MonoBehaviour
 
     private int GetBest(List<TheNetwork> allnetworks)
     {
+        Debug.Log("Get Best called");
         double best = 0;
         int id = 0;
 
@@ -239,7 +283,8 @@ public class Game_Controller : MonoBehaviour
 
     private int GetBest(List<AIController> allnetworks)
     {
-        double best = 0;
+        Debug.Log("Get Best called " + allnetworks.Count);
+        float best = 0;
         int id = 0;
 
         for (int i = 0; i < allnetworks.Count; i++)
@@ -251,11 +296,13 @@ public class Game_Controller : MonoBehaviour
             }
         }
 
+        Debug.Log("getbest ended id returned is " + id);
         return id;
     }
 
     private void RandomizeParentWeights(TheNetwork[] parents)
     {
+        Debug.Log("randomizing weights");
         float[] temp = new float[29];
 
         for (int i = 0; i < temp.Length; i++)
@@ -270,23 +317,24 @@ public class Game_Controller : MonoBehaviour
 
     public void NewGeneration()
     {
-
-        SetBest();
-
+        Debug.Log("NewGen called");
         if (Generation > 0)
         {
+            SetBest();
             Learn();
-
+            RestartAI(Attempts);
         }
         else
         {
             SpawnAi(Attempts);
         }
 
+        Generation++;
     }
 
     private void SetBest()
     {
+        Debug.Log("Set Best called");
         AIController temp = m_CurrentAICont[GetBest(m_CurrentAICont)];
 
         if(temp.m_Ability > m_BestAbility.m_Ability)
@@ -301,6 +349,16 @@ public class Game_Controller : MonoBehaviour
         }
 
     }
+
+    /*float[][] SetBrain(float[][] size)
+    {
+        float[][] infomation = size;
+
+        for (int i = 0; i < infomation.Length; i++)
+        {
+            int temp = i;
+        }
+    }*/
 
 }
 

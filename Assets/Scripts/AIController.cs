@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
-    public TheNetwork m_Newtwork;
+    public TheNetwork m_Newtwork = new TheNetwork(5,4);
     private Game_Controller m_Gamecontroller;
 
     Rigidbody m_RigidBody;
@@ -15,15 +15,16 @@ public class AIController : MonoBehaviour
     private float[] initial;
     public string m_Information;
 
-    int m_Speed = 8;
+    int m_Speed = 20;
     bool IsActive = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_Gamecontroller = Camera.main.GetComponent<Game_Controller>();
-
-        m_Newtwork = new TheNetwork(5,4);
+        if(!(m_Gamecontroller = Camera.main.GetComponent<Game_Controller>()))
+        {
+            Debug.Log("Cant find controller");
+        }
 
         //Get Collider
         m_Collider = GetComponent<BoxCollider>();
@@ -34,6 +35,8 @@ public class AIController : MonoBehaviour
         //set constraints for collider
         m_RigidBody.constraints = RigidbodyConstraints.FreezeRotationX;
         m_RigidBody.constraints = RigidbodyConstraints.FreezeRotationZ;
+
+        m_Newtwork.InitialiseWeights(new float[] { 3.472079f, 1.762525f, -2.266208f, 0.8920379f, -3.915989f, -1.762377f, -2.844904f, 3.381477f, 1.12464f, -3.086241f, 3.320154f, 0.1941123f, 0.1791953f, -3.122393f, 0.8971314f, 0.1158746f, 3.512217f, 1.440832f, 3.3429f, -3.377463f, -2.171291f, 1.523072f, -2.242229f, -2.650826f, 3.01321f, -3.341551f, 3.746894f, -1.755286f, -0.3875917f });
 
         tag = "Alive";
     }
@@ -50,7 +53,7 @@ public class AIController : MonoBehaviour
         }
 
         //rotate left or right depending on the output
-        transform.rotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, Turnamount * 2.0f, 0));
+        transform.rotation = Quaternion.Euler(transform.eulerAngles + Vector3.up * Turnamount * 2.5f);
 
         //this sets up the rays which will later find the distance from the car to the edge of the track
         //in each direction from left to right left, front left, forward, front right, right
@@ -83,6 +86,12 @@ public class AIController : MonoBehaviour
         }
 
         m_Ability += CalculateAbility(Inputs);
+
+        if(IsActive)
+        {
+            Turnamount = m_Newtwork.CalculateOutput(Inputs);
+        }
+
     }
     //this calculates the ability of the AI, which will constantly increase until it is dead
     //
@@ -137,6 +146,7 @@ public class AIController : MonoBehaviour
 
     public void SetInformation(float[] inf)
     {
+        Debug.Log("car information is " + inf);
         initial = inf;
         m_Newtwork.InitialiseWeights(initial);
     }

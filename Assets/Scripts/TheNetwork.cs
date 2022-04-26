@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TheNetwork 
 {
-
+    
     public float[] m_Hiddenlayer;
-    float[][] m_HiddenLWeights;
-    float[] m_HiddenLBias;
+    public float[][] m_HiddenLWeights;
+    public float[] m_HiddenLBias;
 
     public int m_Inputs;
 
@@ -58,22 +58,38 @@ public class TheNetwork
 
     public void InitialiseWeights(float[] Weights)
     {
+
         for (int i = 0; i < m_HiddenLWeights.Length; i++)
         {
             for (int x = 0; x < m_HiddenLWeights[i].Length; x++)
             {
                 m_HiddenLWeights[i][x] = Weights[x + (6*i)];
             }
+
+            m_HiddenLBias[i] = Weights[5 + (i * 6)];
+
+            m_OutputWeights[i] = Weights[i + 24];
+
+            m_OutputBias = Weights[Weights.Length - 1];
         }
+
+
     }
 
     public float CalculateOutput(float[] inputs)
     {
+        Debug.Log("calculating output, HL length is " + m_Hiddenlayer.Length);
+        
+
+
         for (int i = 0; i < m_Hiddenlayer.Length; i++)
         {
-            m_Hiddenlayer[i] = Mathf.Max(0, Sum(m_OutputWeights, m_Hiddenlayer));
+            m_Hiddenlayer[i] = ReLU(Sum(inputs, m_HiddenLWeights[i]) + m_HiddenLBias[i]);
+            Debug.Log("hidden l weights are " + m_HiddenLWeights[i]);
         }
         float output = Limit(Sum(m_OutputWeights, m_Hiddenlayer) + m_OutputBias);
+
+        Debug.Log("output is " + output);
 
         return output;
     }
@@ -88,9 +104,14 @@ public class TheNetwork
         return temp;
     }
 
+    float ReLU(float inp)
+    {
+        return Mathf.Max(0, inp);
+    }
+
     float Limit(float input)
     {
-        return input / (1+Mathf.Abs(input));
+        return input / (1 + Mathf.Abs(input));
     }
 
     //this basically gives the information/details about this brain
