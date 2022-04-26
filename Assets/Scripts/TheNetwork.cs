@@ -58,7 +58,7 @@ public class TheNetwork
 
     public void InitialiseWeights(float[] Weights)
     {
-
+        Debug.Log("initialise weights");
         for (int i = 0; i < m_HiddenLWeights.Length; i++)
         {
             for (int x = 0; x < m_HiddenLWeights[i].Length; x++)
@@ -78,18 +78,14 @@ public class TheNetwork
 
     public float CalculateOutput(float[] inputs)
     {
-        Debug.Log("calculating output, HL length is " + m_Hiddenlayer.Length);
-        
-
+        //Debug.Log("calculating output, HL length is " + m_Hiddenlayer.Length);
 
         for (int i = 0; i < m_Hiddenlayer.Length; i++)
         {
             m_Hiddenlayer[i] = ReLU(Sum(inputs, m_HiddenLWeights[i]) + m_HiddenLBias[i]);
-            Debug.Log("hidden l weights are " + m_HiddenLWeights[i]);
         }
         float output = Limit(Sum(m_OutputWeights, m_Hiddenlayer) + m_OutputBias);
 
-        Debug.Log("output is " + output);
 
         return output;
     }

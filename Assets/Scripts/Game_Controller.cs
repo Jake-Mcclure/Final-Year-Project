@@ -31,7 +31,7 @@ public class Game_Controller : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Started Game Controller");
+        //Debug.Log("Started Game Controller");
         
         m_InitialData = new float[Attempts][];
         m_InitialString = new string[Attempts];
@@ -39,7 +39,9 @@ public class Game_Controller : MonoBehaviour
         {
             m_InitialData[i] = new float[29];
         }
-        Debug.Log(Attempts + " " + m_InitialData.Length);
+
+        //Debug.Log(Attempts + " " + m_InitialData.Length);
+
         RandomDay();
         NewGeneration();
     }
@@ -99,6 +101,7 @@ public class Game_Controller : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
+            Debug.Log("Car " + i);
             AIController car = deadAI[i].GetComponent<AIController>();
 
             car.transform.position = new Vector3(m_StartPos.transform.position.x, 1, m_StartPos.transform.position.z);
@@ -107,16 +110,25 @@ public class Game_Controller : MonoBehaviour
 
             car.SetInformation(m_InitialData[i]);
 
+            car.Reset();
+
+            Debug.Log("car reset" + i);
+
             m_AllAICont.Add(car);
         }
 
         m_CurrentAICont.Clear();
 
-        m_CurrentAICont = m_AllAICont;
+        for (int i = 0; i < m_AllAICont.Count; i++)
+        {
+            m_CurrentAICont.Add(m_AllAICont[i]);
+        }
     }
 
     private void Learn()
     {
+        Debug.Log("learn called");
+
         GameObject[] deadcars = GameObject.FindGameObjectsWithTag("Dead");
 
         List<TheNetwork> allnetworks = new List<TheNetwork>();
@@ -175,6 +187,7 @@ public class Game_Controller : MonoBehaviour
 
     private void SlicedInteraction(List<TheNetwork> allnewtworks)
     {
+        Debug.Log("sliced called");
         TheNetwork[] parents = new TheNetwork[2];
 
         parents = GetParents(allnewtworks);
@@ -234,11 +247,19 @@ public class Game_Controller : MonoBehaviour
         {
             float mutation = Random.value;
 
-            if (mutation < m_MutationProbability && i != childinfo.Split(',').Length -1)
+            bool mutate = mutation < m_MutationRate;
+
+            bool com = i != childinfo.Split(',').Length - 1;
+
+            newchildinfo += (float.Parse(childinfo.Split(',')[i]) + ((mutate) ? Random.Range(-m_MutationRate, m_MutationRate) : 0)) + (com ? "," : string.Empty);
+
+            /*if (mutation < m_MutationProbability && i != childinfo.Split(',').Length -1)
             {
                 newchildinfo += (float.Parse(childinfo.Split(',')[i])) + Random.Range(-m_MutationRate, m_MutationRate) + ',';
-            }
+            }*/
         }
+
+        Debug.Log(newchildinfo);
 
         return newchildinfo;
     }
@@ -295,7 +316,7 @@ public class Game_Controller : MonoBehaviour
                 best = allnetworks[i].m_Ability;
             }
         }
-
+        
         Debug.Log("getbest ended id returned is " + id);
         return id;
     }
@@ -317,6 +338,7 @@ public class Game_Controller : MonoBehaviour
 
     public void NewGeneration()
     {
+
         Debug.Log("NewGen called");
         if (Generation > 0)
         {
@@ -339,13 +361,13 @@ public class Game_Controller : MonoBehaviour
 
         if(temp.m_Ability > m_BestAbility.m_Ability)
         {
-
+            Debug.Log("check 1");
             m_BestAbility = new TheNetwork(temp.m_Newtwork.m_Inputs,temp.m_Newtwork.m_Hiddenlayer.Length);
-
+            Debug.Log("check 2");
             m_BestAbility.SetAbility(temp.m_Ability);
-
+            Debug.Log("check 3");
             m_BestAbility.InitialiseWeights(temp.m_Newtwork.GetBrain());
-
+            Debug.Log("check 4");
         }
 
     }

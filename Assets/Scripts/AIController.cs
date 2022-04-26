@@ -15,12 +15,16 @@ public class AIController : MonoBehaviour
     private float[] initial;
     public string m_Information;
 
-    int m_Speed = 20;
+    public int m_Lap;
+
+    int m_Speed;
     bool IsActive = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_Speed = 10;
+        m_Lap = 1;
         if(!(m_Gamecontroller = Camera.main.GetComponent<Game_Controller>()))
         {
             Debug.Log("Cant find controller");
@@ -36,7 +40,8 @@ public class AIController : MonoBehaviour
         m_RigidBody.constraints = RigidbodyConstraints.FreezeRotationX;
         m_RigidBody.constraints = RigidbodyConstraints.FreezeRotationZ;
 
-        m_Newtwork.InitialiseWeights(new float[] { 3.472079f, 1.762525f, -2.266208f, 0.8920379f, -3.915989f, -1.762377f, -2.844904f, 3.381477f, 1.12464f, -3.086241f, 3.320154f, 0.1941123f, 0.1791953f, -3.122393f, 0.8971314f, 0.1158746f, 3.512217f, 1.440832f, 3.3429f, -3.377463f, -2.171291f, 1.523072f, -2.242229f, -2.650826f, 3.01321f, -3.341551f, 3.746894f, -1.755286f, -0.3875917f });
+        //m_Newtwork.InitialiseWeights(new float[] { 3.472079f, 1.762525f, -2.266208f, 0.8920379f, -3.915989f, -1.762377f, -2.844904f, 3.381477f, 1.12464f, -3.086241f, 3.320154f, 0.1941123f, 0.1791953f, -3.122393f, 0.8971314f, 0.1158746f, 3.512217f, 1.440832f, 3.3429f, -3.377463f, -2.171291f, 1.523072f, -2.242229f, -2.650826f, 3.01321f, -3.341551f, 3.746894f, -1.755286f, -0.3875917f });
+        m_Newtwork.InitialiseWeights(new float[] {3.392318f,1.837881f,-1.975526f,1.753359f,-4.294175f,-2.293187f,-3.118063f,3.982157f,1.886362f,-3.332502f,2.589881f,-0.5650082f,-0.7998129f,-2.323318f,0.3580253f,0.820689f,2.878132f,2.043788f,3.468808f,-3.762825f,-2.515255f,0.999253f,-2.823804f,-3.577962f,3.483124f,-3.816596f,4.26746f,-1.312109f,-0.04019344f});
 
         tag = "Alive";
     }
@@ -49,7 +54,7 @@ public class AIController : MonoBehaviour
         //still running
         if(IsActive)
         {
-            m_RigidBody.MovePosition(transform.position+transform.forward * (Time.deltaTime * m_Speed));
+            m_RigidBody.MovePosition(transform.position + transform.forward * (Time.deltaTime * 50));
         }
 
         //rotate left or right depending on the output
@@ -85,11 +90,14 @@ public class AIController : MonoBehaviour
             
         }
 
-        m_Ability += CalculateAbility(Inputs);
-
         if(IsActive)
         {
             Turnamount = m_Newtwork.CalculateOutput(Inputs);
+            m_Ability += CalculateAbility(Inputs);
+        }
+        else
+        {
+            Turnamount = 0;
         }
 
     }
@@ -104,7 +112,7 @@ public class AIController : MonoBehaviour
             basevalue += inputarray[i];
         }
 
-        return (basevalue/50);
+        return (basevalue/1000) * m_Lap;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -113,6 +121,11 @@ public class AIController : MonoBehaviour
         {
             Stop();
         }
+        else if (other.tag == "LapEnd")
+        {
+            m_Lap++;
+        }
+
     }
 
     public void Stop()
@@ -136,17 +149,19 @@ public class AIController : MonoBehaviour
 
     void CheckIfLast()
     {
+        Debug.Log("check if last called");
         GameObject[] temp = GameObject.FindGameObjectsWithTag("Alive");
 
         if (temp.Length == 0)
         {
+            Debug.Log("calling new generation from check if last");
             m_Gamecontroller.NewGeneration();
         }
     }
 
     public void SetInformation(float[] inf)
     {
-        Debug.Log("car information is " + inf);
+        //Debug.Log("car information is " + inf);
         initial = inf;
         m_Newtwork.InitialiseWeights(initial);
     }
