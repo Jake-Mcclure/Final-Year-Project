@@ -15,11 +15,11 @@ C:/Users/Jake Mcclure/FYP V2 .1/FYP V2 .1/Final-Year-Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65360
+58245
 Successfully changed project path to: C:/Users/Jake Mcclure/FYP V2 .1/FYP V2 .1/Final-Year-Project
 C:/Users/Jake Mcclure/FYP V2 .1/FYP V2 .1/Final-Year-Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 21.82 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 24.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -35,418 +35,463 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56096
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56812
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002251 seconds.
+Registered in 0.003132 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 21.00 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 27.00 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  5.471 seconds
+- Completed reload, in  2.207 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000753 seconds.
+Registered in 0.000777 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.809 seconds
+- Completed reload, in  0.970 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1122 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
+System memory in use before: 57.5 MB.
 System memory in use after: 57.5 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1565.
-Total: 1.562300 ms (FindLiveObjects: 0.160100 ms CreateObjectMapping: 0.031100 ms MarkObjects: 1.273200 ms  DeleteObjects: 0.096900 ms)
+Total: 1.353900 ms (FindLiveObjects: 0.106900 ms CreateObjectMapping: 0.031900 ms MarkObjects: 1.150700 ms  DeleteObjects: 0.063500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48186382522bd1045793fdac79b9c0b5') in 0.116605 seconds
-  Import took 0.118423 seconds .
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.04 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 38.4 MB.
-System memory in use after: 38.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1573.
-Total: 1.721600 ms (FindLiveObjects: 0.112200 ms CreateObjectMapping: 0.025700 ms MarkObjects: 1.518000 ms  DeleteObjects: 0.064800 ms)
+  path: Assets/Otherstuff
+  artifactKey: Guid(bb49271492ddf8b48bec28d04e5d7d4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Otherstuff using Guid(bb49271492ddf8b48bec28d04e5d7d4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31a8ac1e92583161d1d09ccab40a09c8') in 0.004920 seconds
+  Import took 0.007020 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 299.209038 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Meshes/Road.fbx
-  artifactKey: Guid(ab2e556b62273434dad486c1e0a4ebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Meshes/Road.fbx using Guid(ab2e556b62273434dad486c1e0a4ebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6fd692c03d94bdab0dfab2b396dc9f5') in 0.100623 seconds
-  Import took 0.103137 seconds .
+  Time since last request: 0.007726 seconds.
+  path: Assets/Otherstuff
+  artifactKey: Guid(bb49271492ddf8b48bec28d04e5d7d4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Otherstuff using Guid(bb49271492ddf8b48bec28d04e5d7d4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31a8ac1e92583161d1d09ccab40a09c8') in 0.004586 seconds
+  Import took 0.007456 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Meshes/ARCADE - FREE Racing Car.fbx
-  artifactKey: Guid(9ec6a8fc6925acb4abc5500eeecb8270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Meshes/ARCADE - FREE Racing Car.fbx using Guid(9ec6a8fc6925acb4abc5500eeecb8270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb651782e0c9013cf04e6b6e2397deb8') in 0.061888 seconds
-  Import took 0.064453 seconds .
+  Time since last request: 24.529066 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Materials
+  artifactKey: Guid(7cd50ff664f941e4ab191d35f6582e9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Materials using Guid(7cd50ff664f941e4ab191d35f6582e9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a7e1b06e31ed15f340901c0ffeec997') in 0.006012 seconds
+  Import took 0.008381 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000284 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Meshes/Road.fbx
-  artifactKey: Guid(ab2e556b62273434dad486c1e0a4ebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Meshes/Road.fbx using Guid(ab2e556b62273434dad486c1e0a4ebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6fd692c03d94bdab0dfab2b396dc9f5') in 0.012584 seconds
-  Import took 0.015114 seconds .
+  Time since last request: 10.765676 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Materials/Color Variations
+  artifactKey: Guid(8abab931da3a1cd48bf2967746adf82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Materials/Color Variations using Guid(8abab931da3a1cd48bf2967746adf82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '870c011faaf6494086ba301beb8edfcc') in 0.003755 seconds
+  Import took 0.006924 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.048292 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cba9dada2dda7c1accb16eab8b38c2d9') in 0.010577 seconds
-  Import took 0.012743 seconds .
+  Time since last request: 27.384192 seconds.
+  path: Assets/Otherstuff/Walls.mat
+  artifactKey: Guid(6e5bc8e53f23f944aaec1f663940af78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Otherstuff/Walls.mat using Guid(6e5bc8e53f23f944aaec1f663940af78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd128d465bd70ea3eec7e1bfde12b1f97') in 0.136073 seconds
+  Import took 0.138656 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.010619 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cba9dada2dda7c1accb16eab8b38c2d9') in 0.009895 seconds
-  Import took 0.012040 seconds .
+  Time since last request: 15.638417 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Textures/AFRC_Env_Mat.png
+  artifactKey: Guid(34a74330fac842a4f97649ddf77d6d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Textures/AFRC_Env_Mat.png using Guid(34a74330fac842a4f97649ddf77d6d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d1600a8524ce2b795724343c6ce4bf1') in 0.072246 seconds
+  Import took 0.083636 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.847834 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Skybox/Night/Night Skybox.mat
-  artifactKey: Guid(102c3f2cfdcb3d64199f97f4f9aa3d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night/Night Skybox.mat using Guid(102c3f2cfdcb3d64199f97f4f9aa3d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3453c128e95062a9457642397546e8d5') in 0.241473 seconds
-  Import took 0.243698 seconds .
+  Time since last request: 0.000251 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Day/Textures/Bottom.png
+  artifactKey: Guid(d09270a5be941b14e8cd76b7d0347e0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Day/Textures/Bottom.png using Guid(d09270a5be941b14e8cd76b7d0347e0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29e68870d1782fc6d5cb7e0800d5bf17') in 0.021170 seconds
+  Import took 0.023597 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000342 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Skybox/Day/Day Skybox.mat
-  artifactKey: Guid(2fdc1726342f4a749a190a0a8677a1a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Skybox/Day/Day Skybox.mat using Guid(2fdc1726342f4a749a190a0a8677a1a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09976af73afc5f08a82c1733caa0d39e') in 0.016930 seconds
-  Import took 0.018655 seconds .
+  Time since last request: 0.000306 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Textures/AFRC_Env_Mat.png
+  artifactKey: Guid(34a74330fac842a4f97649ddf77d6d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Textures/AFRC_Env_Mat.png using Guid(34a74330fac842a4f97649ddf77d6d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d1600a8524ce2b795724343c6ce4bf1') in 0.007410 seconds
+  Import took 0.009720 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.038225 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col4.mat
-  artifactKey: Guid(104696f8b5f23d24586d858b68916bdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col4.mat using Guid(104696f8b5f23d24586d858b68916bdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a016e52474967c3d7dd624a2260887') in 0.250200 seconds
-  Import took 0.252165 seconds .
+  Time since last request: 0.000377 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col5.png
+  artifactKey: Guid(ee5f07cb504e5b04dbdd32ef7d265c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col5.png using Guid(ee5f07cb504e5b04dbdd32ef7d265c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5096e0b6fd562934396756083774cb91') in 0.008840 seconds
+  Import took 0.010890 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000325 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col3.mat
-  artifactKey: Guid(c4c2ee3e832cffd48bb9d156c2b21376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col3.mat using Guid(c4c2ee3e832cffd48bb9d156c2b21376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '297c33eb71c92d32b86b30a814bfb2ed') in 0.009545 seconds
-  Import took 0.012018 seconds .
+  Time since last request: 0.000238 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col4.png
+  artifactKey: Guid(1732d531203aec748bc591f92d780684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col4.png using Guid(1732d531203aec748bc591f92d780684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9615937e39a76b5294332259901ec2') in 0.009779 seconds
+  Import took 0.012108 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col5.mat
-  artifactKey: Guid(74196cf5d503c14488ae1ef1dbc6c9a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col5.mat using Guid(74196cf5d503c14488ae1ef1dbc6c9a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44ab95485052879e58f14a7bc8c81a8d') in 0.011906 seconds
-  Import took 0.014896 seconds .
+  Time since last request: 0.000209 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col2.png
+  artifactKey: Guid(6242e2ca19f64494ba8e4ae07a3a2c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col2.png using Guid(6242e2ca19f64494ba8e4ae07a3a2c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b562a73598c5ee7afbca46b6c50dff67') in 0.011367 seconds
+  Import took 0.013856 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000308 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col2.mat
-  artifactKey: Guid(d2344366b80fe3d4f886ec412e0174fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col2.mat using Guid(d2344366b80fe3d4f886ec412e0174fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66157e3250de58ff99f0955c332d61ad') in 0.013021 seconds
-  Import took 0.015100 seconds .
+  Time since last request: 0.000199 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Textures/AFRC_Tex_Emission.png
+  artifactKey: Guid(573a5992a1e562d45a64f56dabbe47ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Textures/AFRC_Tex_Emission.png using Guid(573a5992a1e562d45a64f56dabbe47ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51918974322b1418614accbd48da6a91') in 0.010709 seconds
+  Import took 0.012977 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.047756 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Materials/AFRC_Env_Mat.mat
-  artifactKey: Guid(69b6e8fa160b23c42a4052f818eb166c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Materials/AFRC_Env_Mat.mat using Guid(69b6e8fa160b23c42a4052f818eb166c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '069ea51127258cfa8ffaf0440aea6d55') in 0.119162 seconds
-  Import took 0.121052 seconds .
+  Time since last request: 0.000208 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col3.png
+  artifactKey: Guid(f5339e3a5ecdae64aa3afa490a1d892e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col3.png using Guid(f5339e3a5ecdae64aa3afa490a1d892e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66ee45c68f1c9aba53354f18db3eff29') in 0.009086 seconds
+  Import took 0.011255 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000362 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Materials/AFRC_Emission.mat
-  artifactKey: Guid(ab035d7682921704a9015ac353311d57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Materials/AFRC_Emission.mat using Guid(ab035d7682921704a9015ac353311d57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c2c734a854b4ff383f6e7980f73b25a') in 0.099330 seconds
-  Import took 0.101609 seconds .
+  Time since last request: 0.000211 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col1.png
+  artifactKey: Guid(8c508eea1762dd44cbf66593e03a6b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Textures/Color Variations/AFRC_Tex_Col1.png using Guid(8c508eea1762dd44cbf66593e03a6b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db459f57924b2c944779f39c4cebc451') in 0.008536 seconds
+  Import took 0.010289 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col1.mat
-  artifactKey: Guid(07f44fe3e9c462146a7769b976c50ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Materials/Color Variations/AFRC_Mat_Col1.mat using Guid(07f44fe3e9c462146a7769b976c50ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99ec3a4fe7d4eb3105708e11a7c89d7') in 0.010967 seconds
-  Import took 0.013273 seconds .
+  Time since last request: 0.779378 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures/Bottom.png
+  artifactKey: Guid(e5ebd597679525a438f3f1e01f33e8e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures/Bottom.png using Guid(e5ebd597679525a438f3f1e01f33e8e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '400fdb3a583d4f0f8f3120486f036990') in 0.010511 seconds
+  Import took 0.012983 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.525396 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a34e1c9cf561f635ce884dae78b16c4') in 0.010967 seconds
-  Import took 0.012959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.035389 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a34e1c9cf561f635ce884dae78b16c4') in 0.010585 seconds
-  Import took 0.012989 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.720507 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)
-  artifactKey: Guid(9d896aab1f5aa8946ae832f1329a6dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders) using Guid(9d896aab1f5aa8946ae832f1329a6dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74a5a4bee9517bcb459945c4a1f2e62c') in 0.003550 seconds
-  Import took 0.005468 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.085407 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car Blue Variant.prefab
-  artifactKey: Guid(e9be6b9d71ce20345b55b654f6eca5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car Blue Variant.prefab using Guid(e9be6b9d71ce20345b55b654f6eca5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a50e56bc05aeff04ce0d007ae06c8eac') in 0.015289 seconds
-  Import took 0.017511 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000337 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car Purple Variant.prefab
-  artifactKey: Guid(62010132604e8c94d96b4cb4fe6d3394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car Purple Variant.prefab using Guid(62010132604e8c94d96b4cb4fe6d3394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af78edb30864f90e2666dc49e6a6f1b') in 0.014754 seconds
-  Import took 0.016797 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000302 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car Gray Variant.prefab
-  artifactKey: Guid(4d1624804e8167f479ab63c5302ff1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car Gray Variant.prefab using Guid(4d1624804e8167f479ab63c5302ff1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3e14017364a679e726a2a8a4725c8bc') in 0.015158 seconds
-  Import took 0.017731 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000341 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car Red Variant.prefab
-  artifactKey: Guid(8a8f57edf3523624eb9f886833e8e97a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car Red Variant.prefab using Guid(8a8f57edf3523624eb9f886833e8e97a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ab70d6cec7512980d2a92be641db35c') in 0.020332 seconds
-  Import took 0.023442 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car.prefab
-  artifactKey: Guid(133308cdb8794744caaef026bde9e1f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (With Colliders)/Free Racing Car.prefab using Guid(133308cdb8794744caaef026bde9e1f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22dc99e45cb8a65b5dfa1229512e0368') in 0.014569 seconds
-  Import took 0.017424 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.986957 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car Blue Variant.prefab
-  artifactKey: Guid(a9cbfe7195f75844aa7ec0619ca7616f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car Blue Variant.prefab using Guid(a9cbfe7195f75844aa7ec0619ca7616f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4841b035a6f937b03c02cfe4038f6d44') in 0.013157 seconds
-  Import took 0.015323 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000333 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car.prefab
-  artifactKey: Guid(c4cad50aa03bbca42938fe318344950b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car.prefab using Guid(c4cad50aa03bbca42938fe318344950b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c686b8b6ffb119c5cccba33cea9234c') in 0.011317 seconds
-  Import took 0.013272 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000338 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car Gray Variant.prefab
-  artifactKey: Guid(f430073c636116b4b9c0f5e6ddcde097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car Gray Variant.prefab using Guid(f430073c636116b4b9c0f5e6ddcde097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebd7f11b2a118a9d9feda8e8bd989c25') in 0.013475 seconds
-  Import took 0.015616 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000339 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car Purple Variant.prefab
-  artifactKey: Guid(98c57f100a7d7684dba02b8725bbc5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car Purple Variant.prefab using Guid(98c57f100a7d7684dba02b8725bbc5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '087cc050b562550f1b3ccfe30480f9d7') in 0.012811 seconds
-  Import took 0.015395 seconds .
+  Time since last request: 0.000295 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Day/Textures/Middle.png
+  artifactKey: Guid(1547f812d72e8dc41aeb23f1ca2d0f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Day/Textures/Middle.png using Guid(1547f812d72e8dc41aeb23f1ca2d0f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e0d9543a2c45ea379869eb75b64ae5e') in 0.009818 seconds
+  Import took 0.011817 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000354 seconds.
-  path: Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car Red Variant.prefab
-  artifactKey: Guid(a82f70a5f0178974093910fc6fd84c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ARCADE - FREE Racing Car/Prefabs (Meshes Only)/Free Racing Car Red Variant.prefab using Guid(a82f70a5f0178974093910fc6fd84c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29c05fef1908946f9e1b5816bcbfcefa') in 0.011295 seconds
-  Import took 0.013206 seconds .
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures/Bottom.png
+  artifactKey: Guid(e5ebd597679525a438f3f1e01f33e8e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures/Bottom.png using Guid(e5ebd597679525a438f3f1e01f33e8e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '400fdb3a583d4f0f8f3120486f036990') in 0.009318 seconds
+  Import took 0.011258 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 87.679769 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a63911280fdf4dfea86455f79927d01') in 0.013369 seconds
-  Import took 0.015798 seconds .
+  Time since last request: 0.000380 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Scenes/More cars.png
+  artifactKey: Guid(d12c0013fcfea9e4a9ee272bfaaec870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Scenes/More cars.png using Guid(d12c0013fcfea9e4a9ee272bfaaec870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b3f9b28367311a1cdeb7c3114fa18ef') in 0.012569 seconds
+  Import took 0.015050 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.021619 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35cc269fce0fda2f16bd830709a29052') in 0.015869 seconds
-  Import took 0.018986 seconds .
+  Time since last request: 0.000445 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Day/Textures/Middle.png
+  artifactKey: Guid(1547f812d72e8dc41aeb23f1ca2d0f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Day/Textures/Middle.png using Guid(1547f812d72e8dc41aeb23f1ca2d0f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e0d9543a2c45ea379869eb75b64ae5e') in 0.008526 seconds
+  Import took 0.010634 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.436379 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fa0140a3c007e0ebd5730ff2ec7a250') in 0.015322 seconds
-  Import took 0.017765 seconds .
+  Time since last request: 0.000347 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures/Middle.png
+  artifactKey: Guid(0dbf12657f27a3643a08e61b84c12483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures/Middle.png using Guid(0dbf12657f27a3643a08e61b84c12483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f825f9de5333803bb0d100e8da3ea3e4') in 0.012983 seconds
+  Import took 0.014974 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.164399 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dace0264688ebdeda3f7cdccf82003de') in 0.013960 seconds
-  Import took 0.016573 seconds .
+  Time since last request: 0.000296 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures/Top.png
+  artifactKey: Guid(e4d8993639f071845bb71cdd5ccaf886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures/Top.png using Guid(e4d8993639f071845bb71cdd5ccaf886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '613e68e7c0dc079a5d300533c0848478') in 0.009986 seconds
+  Import took 0.012381 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.994064 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30186e54954a3352df359694fe45bd7b') in 0.013981 seconds
-  Import took 0.016150 seconds .
+  Time since last request: 0.000339 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Day/Textures/Top.png
+  artifactKey: Guid(0ea79d67094ea414ca3f589eeac91a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Day/Textures/Top.png using Guid(0ea79d67094ea414ca3f589eeac91a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6215f8255646ee38eea3e8ec803f6ec8') in 0.012673 seconds
+  Import took 0.014664 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.935308 seconds.
-  path: Assets/Prefab/Car.prefab
-  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23eb62ab5f5fc862cd76b58ba5a0cc8f') in 0.012953 seconds
-  Import took 0.015206 seconds .
+  Time since last request: 144.084155 seconds.
+  path: Assets/Otherstuff/Floor.mat
+  artifactKey: Guid(a02f60e7bd4d5d24d9a4faad77bab6ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Otherstuff/Floor.mat using Guid(a02f60e7bd4d5d24d9a4faad77bab6ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a06e5beb81d50c70cdc76454e03e1d3') in 0.021415 seconds
+  Import took 0.023765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.258017 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Scenes
+  artifactKey: Guid(f5e319e41d6dacd4ca48ffd42be2063e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Scenes using Guid(f5e319e41d6dacd4ca48ffd42be2063e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f20af17cb848b81358aea736193afbb6') in 0.003513 seconds
+  Import took 0.006953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000584 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Scenes
+  artifactKey: Guid(f5e319e41d6dacd4ca48ffd42be2063e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Scenes using Guid(f5e319e41d6dacd4ca48ffd42be2063e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f20af17cb848b81358aea736193afbb6') in 0.003616 seconds
+  Import took 0.006201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.971008 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Scenes/Post Processing
+  artifactKey: Guid(a2402d9080f37e3409a46c76d26e0bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Scenes/Post Processing using Guid(a2402d9080f37e3409a46c76d26e0bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03833191d711e56f7137045546f89b61') in 0.005369 seconds
+  Import took 0.007465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.059599 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Scenes/Post Processing/AFRC Volume Profile.asset
+  artifactKey: Guid(d297d2778eef9fb4cbc6b69c18433b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Scenes/Post Processing/AFRC Volume Profile.asset using Guid(d297d2778eef9fb4cbc6b69c18433b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba8d3dccbc0bce2c71112a30c713ed9') in 0.007027 seconds
+  Import took 0.008720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.521426 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Day
+  artifactKey: Guid(2753f03c0463b774c9d0a311d32118ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Day using Guid(2753f03c0463b774c9d0a311d32118ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb1184a977376261a67d0b3d8c9273b') in 0.006515 seconds
+  Import took 0.008603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Day
+  artifactKey: Guid(2753f03c0463b774c9d0a311d32118ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Day using Guid(2753f03c0463b774c9d0a311d32118ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb1184a977376261a67d0b3d8c9273b') in 0.004417 seconds
+  Import took 0.007196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.788738 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Night
+  artifactKey: Guid(0a72db5fe34b9844f85364d8b25d5f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night using Guid(0a72db5fe34b9844f85364d8b25d5f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6b69bfeaf663d7c7f64e95322ce431') in 0.003613 seconds
+  Import took 0.006249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000996 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Night
+  artifactKey: Guid(0a72db5fe34b9844f85364d8b25d5f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night using Guid(0a72db5fe34b9844f85364d8b25d5f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6b69bfeaf663d7c7f64e95322ce431') in 0.004335 seconds
+  Import took 0.006958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.107886 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures
+  artifactKey: Guid(717d1fbcbedc3cb4ebbe20a73eec3cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures using Guid(717d1fbcbedc3cb4ebbe20a73eec3cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff74471731d8a1383276312dacee99ff') in 0.003174 seconds
+  Import took 0.005675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000922 seconds.
+  path: Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures
+  artifactKey: Guid(717d1fbcbedc3cb4ebbe20a73eec3cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ARCADE - FREE Racing Car/Skybox/Night/Textures using Guid(717d1fbcbedc3cb4ebbe20a73eec3cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff74471731d8a1383276312dacee99ff') in 0.002704 seconds
+  Import took 0.004806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.859543 seconds.
+  path: Assets/Scenes/Track1.unity
+  artifactKey: Guid(b2d663eb25bd28247bc066eb7c66767c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Track1.unity using Guid(b2d663eb25bd28247bc066eb7c66767c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82819dc1119838d44a7dbd1dff204054') in 0.003936 seconds
+  Import took 0.006989 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.066095 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a314c9b769f4e0b4723e300f0e3fa66f') in 0.005986 seconds
+  Import took 0.008186 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000869 seconds.
+Registered in 0.000755 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.752 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.8 MB.
+System memory in use after: 60.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1610.
+Total: 1.631100 ms (FindLiveObjects: 0.114900 ms CreateObjectMapping: 0.026000 ms MarkObjects: 1.421000 ms  DeleteObjects: 0.068400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 123.464372 seconds.
+  path: Assets/Otherstuff/Walls.mat
+  artifactKey: Guid(6e5bc8e53f23f944aaec1f663940af78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Otherstuff/Walls.mat using Guid(6e5bc8e53f23f944aaec1f663940af78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd348fb2c411646378dd95456c54cf25') in 0.064495 seconds
+  Import took 0.067170 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001219 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.803 seconds
+Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.776 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.1 MB.
-System memory in use after: 61.2 MB.
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1613.
-Total: 1.654100 ms (FindLiveObjects: 0.132800 ms CreateObjectMapping: 0.030500 ms MarkObjects: 1.414600 ms  DeleteObjects: 0.075300 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1614.
+Total: 1.366600 ms (FindLiveObjects: 0.114100 ms CreateObjectMapping: 0.028700 ms MarkObjects: 1.145700 ms  DeleteObjects: 0.077200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000721 seconds.
+Registered in 0.000831 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.734 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1617.
+Total: 1.702500 ms (FindLiveObjects: 0.122200 ms CreateObjectMapping: 0.028100 ms MarkObjects: 1.470900 ms  DeleteObjects: 0.080300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000984 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.913 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.9 MB.
+System memory in use after: 60.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1620.
+Total: 2.104800 ms (FindLiveObjects: 0.187600 ms CreateObjectMapping: 0.050800 ms MarkObjects: 1.779200 ms  DeleteObjects: 0.086000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1240.071904 seconds.
+  path: Assets/Prefab/Car.prefab
+  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9836b4fde1f2fccf17d0472ddd28f6d') in 0.079161 seconds
+  Import took 0.081725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.016756 seconds.
+  path: Assets/Prefab/Car.prefab
+  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dff390ea6f1cebd12918258b1da77cf') in 0.019625 seconds
+  Import took 0.023679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.822681 seconds.
+  path: Assets/Prefab/Car.prefab
+  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a2d89a399c6b0eed2e6120306665abf') in 0.017135 seconds
+  Import took 0.019363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.440280 seconds.
+  path: Assets/Prefab/Car.prefab
+  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c814d0e8cdc2b8746fb52cd1042cc6e3') in 0.012554 seconds
+  Import took 0.014992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.450065 seconds.
+  path: Assets/Prefab/Car.prefab
+  artifactKey: Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Car.prefab using Guid(5ae052669d14d1048b4ec17f74e4a57f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '246655ad7b23a4dd93adf0b20c71e2c2') in 0.012802 seconds
+  Import took 0.015848 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001003 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.732 seconds
+- Completed reload, in  0.831 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.1 MB.
-System memory in use after: 61.2 MB.
+System memory in use before: 60.9 MB.
+System memory in use after: 61.0 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1616.
-Total: 1.676300 ms (FindLiveObjects: 0.116500 ms CreateObjectMapping: 0.025900 ms MarkObjects: 1.458200 ms  DeleteObjects: 0.074900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000719 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.720 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.1 MB.
-System memory in use after: 61.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1619.
-Total: 1.743600 ms (FindLiveObjects: 0.163500 ms CreateObjectMapping: 0.026400 ms MarkObjects: 1.469000 ms  DeleteObjects: 0.083700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000807 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.809 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.2 MB.
-System memory in use after: 61.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1622.
-Total: 1.635800 ms (FindLiveObjects: 0.125700 ms CreateObjectMapping: 0.030200 ms MarkObjects: 1.425600 ms  DeleteObjects: 0.053200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001324 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.765 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.2 MB.
-System memory in use after: 61.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1625.
-Total: 1.611900 ms (FindLiveObjects: 0.140100 ms CreateObjectMapping: 0.033800 ms MarkObjects: 1.348900 ms  DeleteObjects: 0.088000 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1624.
+Total: 1.688100 ms (FindLiveObjects: 0.227600 ms CreateObjectMapping: 0.041500 ms MarkObjects: 1.369800 ms  DeleteObjects: 0.047900 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

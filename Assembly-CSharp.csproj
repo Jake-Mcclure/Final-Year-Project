@@ -58,11 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Car.cs" />
     <Compile Include="Assets\Scripts\Player_Controller.cs" />
+    <Compile Include="Assets\Scripts\TheNetwork.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\CheckpointController.cs" />
-    <Compile Include="Assets\Scripts\Game_Controller.cs" />
     <Compile Include="Assets\Scripts\AIController.cs" />
-    <Compile Include="Assets\Scripts\TheNetwork.cs" />
+    <Compile Include="Assets\Scripts\Game_Controller.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -54,7 +54,7 @@ public class AIController : MonoBehaviour
         //still running
         if(IsActive)
         {
-            m_RigidBody.MovePosition(transform.position + transform.forward * (Time.deltaTime * 50));
+            m_RigidBody.MovePosition(transform.position + transform.forward * (Time.deltaTime * 75));
         }
 
         //rotate left or right depending on the output
