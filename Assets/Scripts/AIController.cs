@@ -41,8 +41,8 @@ public class AIController : MonoBehaviour
         m_RigidBody.constraints = RigidbodyConstraints.FreezeRotationZ;
 
         //m_Newtwork.InitialiseWeights(new float[] { 3.472079f, 1.762525f, -2.266208f, 0.8920379f, -3.915989f, -1.762377f, -2.844904f, 3.381477f, 1.12464f, -3.086241f, 3.320154f, 0.1941123f, 0.1791953f, -3.122393f, 0.8971314f, 0.1158746f, 3.512217f, 1.440832f, 3.3429f, -3.377463f, -2.171291f, 1.523072f, -2.242229f, -2.650826f, 3.01321f, -3.341551f, 3.746894f, -1.755286f, -0.3875917f });
-        m_Newtwork.InitialiseWeights(new float[] {3.392318f,1.837881f,-1.975526f,1.753359f,-4.294175f,-2.293187f,-3.118063f,3.982157f,1.886362f,-3.332502f,2.589881f,-0.5650082f,-0.7998129f,-2.323318f,0.3580253f,0.820689f,2.878132f,2.043788f,3.468808f,-3.762825f,-2.515255f,0.999253f,-2.823804f,-3.577962f,3.483124f,-3.816596f,4.26746f,-1.312109f,-0.04019344f});
-
+        //m_Newtwork.InitialiseWeights(new float[] {3.392318f,1.837881f,-1.975526f,1.753359f,-4.294175f,-2.293187f,-3.118063f,3.982157f,1.886362f,-3.332502f,2.589881f,-0.5650082f,-0.7998129f,-2.323318f,0.3580253f,0.820689f,2.878132f,2.043788f,3.468808f,-3.762825f,-2.515255f,0.999253f,-2.823804f,-3.577962f,3.483124f,-3.816596f,4.26746f,-1.312109f,-0.04019344f});
+        m_Newtwork.InitialiseWeights(new float[] {2.680655f, 1.45462f, -2.919403f, 0.9514958f, -4.532198f, -2.111656f, -2.388326f, 3.16306f, 0.9624192f, -3.405635f, 3.510265f, -1.041404f, 0.1047662f, -2.852448f, -0.06707132f, 1.326346f, 3.550567f, 2.365993f, 2.645675f, -3.523063f, -2.591178f, 0.3205468f, -2.986468f, -3.395661f, 3.26246f, -4.475611f, 3.515121f, -0.5581498f, -0.78376f });
         tag = "Alive";
     }
 
@@ -54,11 +54,11 @@ public class AIController : MonoBehaviour
         //still running
         if(IsActive)
         {
-            m_RigidBody.MovePosition(transform.position + transform.forward * (Time.deltaTime * 75));
+            m_RigidBody.MovePosition(transform.position + transform.forward * (Time.deltaTime * 40));
         }
 
         //rotate left or right depending on the output
-        transform.rotation = Quaternion.Euler(transform.eulerAngles + Vector3.up * Turnamount * 2.5f);
+        transform.rotation = Quaternion.Euler(transform.eulerAngles + Vector3.up * Turnamount * 3f);
 
         //this sets up the rays which will later find the distance from the car to the edge of the track
         //in each direction from left to right left, front left, forward, front right, right

@@ -7,6 +7,7 @@ public enum Method {Random, Slice}
 
 public class Game_Controller : MonoBehaviour
 {
+    public Text GenerationText;
 
     private List<AIController> m_CurrentAICont = new List<AIController>();
     public List<AIController> m_AllAICont = new List<AIController>();
@@ -53,7 +54,7 @@ public class Game_Controller : MonoBehaviour
 
         if (IsActive)
         {
-
+            GenerationText.text = "Generation : " + Generation;
         }
 
     }
@@ -77,7 +78,7 @@ public class Game_Controller : MonoBehaviour
         {
             AIController car = Instantiate(m_Car).GetComponent<AIController>();
 
-            car.transform.position = new Vector3(m_StartPos.transform.position.x, 1, m_StartPos.transform.position.z);
+            car.transform.position = new Vector3(m_StartPos.transform.position.x, m_StartPos.transform.position.y, m_StartPos.transform.position.z);
 
             car.transform.eulerAngles = new Vector3(0, 0, 0);
 
@@ -104,7 +105,7 @@ public class Game_Controller : MonoBehaviour
             Debug.Log("Car " + i);
             AIController car = deadAI[i].GetComponent<AIController>();
 
-            car.transform.position = new Vector3(m_StartPos.transform.position.x, 1, m_StartPos.transform.position.z);
+            car.transform.position = new Vector3(m_StartPos.transform.position.x, m_StartPos.transform.position.y, m_StartPos.transform.position.z);
 
             car.transform.eulerAngles = new Vector3(0, 0, 0);
 
@@ -323,7 +324,7 @@ public class Game_Controller : MonoBehaviour
 
     private void RandomizeParentWeights(TheNetwork[] parents)
     {
-        Debug.Log("randomizing weights");
+       //Debug.Log("randomizing weights");
         float[] temp = new float[29];
 
         for (int i = 0; i < temp.Length; i++)
@@ -339,7 +340,7 @@ public class Game_Controller : MonoBehaviour
     public void NewGeneration()
     {
 
-        Debug.Log("NewGen called");
+        //Debug.Log("NewGen called");
         if (Generation > 0)
         {
             SetBest();
@@ -361,13 +362,13 @@ public class Game_Controller : MonoBehaviour
 
         if(temp.m_Ability > m_BestAbility.m_Ability)
         {
-            Debug.Log("check 1");
+            //Debug.Log("check 1");
             m_BestAbility = new TheNetwork(temp.m_Newtwork.m_Inputs,temp.m_Newtwork.m_Hiddenlayer.Length);
-            Debug.Log("check 2");
+            //Debug.Log("check 2");
             m_BestAbility.SetAbility(temp.m_Ability);
-            Debug.Log("check 3");
+            //Debug.Log("check 3");
             m_BestAbility.InitialiseWeights(temp.m_Newtwork.GetBrain());
-            Debug.Log("check 4");
+           // Debug.Log("check 4");
         }
 
     }
