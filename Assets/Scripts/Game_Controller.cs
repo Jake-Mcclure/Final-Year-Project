@@ -59,6 +59,7 @@ public class Game_Controller : MonoBehaviour
 
     }
 
+    //this randomizes the initial data giving values between 4 and -4
     void RandomDay()
     {
         Debug.Log("RandomDay called");
@@ -71,6 +72,7 @@ public class Game_Controller : MonoBehaviour
         }
     }
 
+    //this is called to first spawn the group of cars
     public void SpawnAi(int amount)
     {
         Debug.Log("Spawn AI called");
@@ -95,6 +97,8 @@ public class Game_Controller : MonoBehaviour
         }
     }
     
+    //this is called to respawn the cars, it loops through them all and sets all the various variables 
+    //such as the brains information
     public void RestartAI(int amount)
     {
         Debug.Log("Restart AI called");
@@ -126,6 +130,8 @@ public class Game_Controller : MonoBehaviour
         }
     }
 
+    //this gets all the dead cars and adds them to a list, it then puts them through either the random selection learning
+    //process or it will put them through the sliced learning progress
     private void Learn()
     {
         Debug.Log("learn called");
@@ -153,6 +159,8 @@ public class Game_Controller : MonoBehaviour
         }
     }    
 
+    //this is used to create offspirng from two parents it randomly chooses which parent will give each bit of information
+    //if it works out it will mutate a random float will be added 
     private void RandomInteraction(List<TheNetwork> allnetworks)
     {
         TheNetwork[] parents = new TheNetwork[2];
@@ -186,6 +194,8 @@ public class Game_Controller : MonoBehaviour
         }
     }
 
+    //this is used to create offspring from the two best parents, it uses segmants from both parents
+
     private void SlicedInteraction(List<TheNetwork> allnewtworks)
     {
         Debug.Log("sliced called");
@@ -212,7 +222,9 @@ public class Game_Controller : MonoBehaviour
         }
 
     }
-
+    //this creates thew information/brain for a child from two parents, it uses a random amount of the first numbers in the brain from the first parent
+    //then it will use another random amount of information from the second parent, finally if the brain is not full (has 29 floats)
+    //it will continue the rest of the brain with the inforamtion from the first parent
     private string MakeChildInfo(TheNetwork[] parents)
     {
         int start = Random.Range(0, 29);
@@ -265,6 +277,8 @@ public class Game_Controller : MonoBehaviour
         return newchildinfo;
     }
 
+
+    //this returns the two parents with the two highest abilities
     private TheNetwork[] GetParents(List<TheNetwork> allnetworks)
     {
         TheNetwork[] parents = new TheNetwork[2];
@@ -285,6 +299,8 @@ public class Game_Controller : MonoBehaviour
         return parents;
     }
 
+
+    //this returns the index of the car with the highest ability
     private int GetBest(List<TheNetwork> allnetworks)
     {
         Debug.Log("Get Best called");
@@ -302,7 +318,7 @@ public class Game_Controller : MonoBehaviour
 
         return id;
     }
-
+    //this returns the index of the car with the highest ability
     private int GetBest(List<AIController> allnetworks)
     {
         Debug.Log("Get Best called " + allnetworks.Count);
@@ -322,6 +338,7 @@ public class Game_Controller : MonoBehaviour
         return id;
     }
 
+    //this will randomize the weights of the two parents 
     private void RandomizeParentWeights(TheNetwork[] parents)
     {
        //Debug.Log("randomizing weights");
@@ -337,6 +354,7 @@ public class Game_Controller : MonoBehaviour
         parents[fifty].InitialiseWeights(temp);
     }
 
+    //this is called at the start of a new generation, it calles all the needed functions
     public void NewGeneration()
     {
 
@@ -355,9 +373,10 @@ public class Game_Controller : MonoBehaviour
         Generation++;
     }
 
+    //this will set old best car to the new best car
     private void SetBest()
     {
-        Debug.Log("Set Best called");
+        //Debug.Log("Set Best called");
         AIController temp = m_CurrentAICont[GetBest(m_CurrentAICont)];
 
         if(temp.m_Ability > m_BestAbility.m_Ability)
@@ -372,16 +391,6 @@ public class Game_Controller : MonoBehaviour
         }
 
     }
-
-    /*float[][] SetBrain(float[][] size)
-    {
-        float[][] infomation = size;
-
-        for (int i = 0; i < infomation.Length; i++)
-        {
-            int temp = i;
-        }
-    }*/
 
 }
 

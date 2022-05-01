@@ -29,10 +29,13 @@ public class TheNetwork
 
     }
 
+   
     public void SetAbility(float ability)
     {
         m_Ability = ability;
     }
+
+
     //this makes all weights equal to 0
     public void InitialiseWeights(int inputs)
     {
@@ -56,6 +59,7 @@ public class TheNetwork
         }
     }
 
+    //
     public void InitialiseWeights(float[] Weights)
     {
         Debug.Log("initialise weights");
@@ -76,13 +80,15 @@ public class TheNetwork
 
     }
 
+    //this calculates the output/turning amoount to turn, it uses the inputs to set the values for the hidden layer
+    //once this is done it will return the turn amount between 1 and -1 using a combination of the output weights and bias along with the new values for the hidden layer
     public float CalculateOutput(float[] inputs)
     {
         //Debug.Log("calculating output, HL length is " + m_Hiddenlayer.Length);
 
         for (int i = 0; i < m_Hiddenlayer.Length; i++)
         {
-            m_Hiddenlayer[i] = ReLU(Sum(inputs, m_HiddenLWeights[i]) + m_HiddenLBias[i]);
+            m_Hiddenlayer[i] = Maxout(Sum(inputs, m_HiddenLWeights[i]) + m_HiddenLBias[i]);
         }
         float output = Limit(Sum(m_OutputWeights, m_Hiddenlayer) + m_OutputBias);
 
@@ -100,7 +106,7 @@ public class TheNetwork
         return temp;
     }
 
-    float ReLU(float inp)
+    float Maxout(float inp)
     {
         return Mathf.Max(0, inp);
     }
