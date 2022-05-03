@@ -28,7 +28,6 @@ public class TheNetwork
         m_Inputs = inputs;
 
     }
-
    
     public void SetAbility(float ability)
     {
@@ -59,7 +58,7 @@ public class TheNetwork
         }
     }
 
-    //
+    //this initialises the weights and bias's usign the information from the brain
     public void InitialiseWeights(float[] Weights)
     {
         Debug.Log("initialise weights");
@@ -67,16 +66,15 @@ public class TheNetwork
         {
             for (int x = 0; x < m_HiddenLWeights[i].Length; x++)
             {
-                m_HiddenLWeights[i][x] = Weights[x + (6*i)];
+                m_HiddenLWeights[i][x] = Weights[x + (i * 6)];
             }
 
             m_HiddenLBias[i] = Weights[5 + (i * 6)];
 
             m_OutputWeights[i] = Weights[i + 24];
-
-            m_OutputBias = Weights[Weights.Length - 1];
+            
         }
-
+        m_OutputBias = Weights[Weights.Length - 1];
 
     }
 

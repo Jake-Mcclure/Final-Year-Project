@@ -11,9 +11,8 @@ public class Game_Controller : MonoBehaviour
 
     private List<AIController> m_CurrentAICont = new List<AIController>();
     public List<AIController> m_AllAICont = new List<AIController>();
-    private AIController m_AICont;
 
-    public Method m_method= Method.Slice;
+    public Method m_method = Method.Slice;
 
     public GameObject m_Car,m_StartPos;
     private float[][] m_InitialData;
@@ -22,13 +21,15 @@ public class Game_Controller : MonoBehaviour
     public List<string> LoadedInformation;
 
     private float m_MutationRate = 1.0f;
-    private float m_MutationProbability = 0.75f;
+    private float m_MutationProbability = 0.075f;
 
-    private List<float> m_Abilities;
     private TheNetwork m_BestAbility = new TheNetwork();
 
     private int Generation = 0;
     public int Attempts = 12;
+    public int MaxLaps = 2;
+
+    public bool m_Complete = false;
 
     private void Start()
     {
@@ -102,31 +103,34 @@ public class Game_Controller : MonoBehaviour
     public void RestartAI(int amount)
     {
         Debug.Log("Restart AI called");
-        GameObject[] deadAI = GameObject.FindGameObjectsWithTag("Dead");
-
-        for (int i = 0; i < amount; i++)
+        if (!m_Complete)
         {
-            Debug.Log("Car " + i);
-            AIController car = deadAI[i].GetComponent<AIController>();
+            GameObject[] deadAI = GameObject.FindGameObjectsWithTag("Dead");
 
-            car.transform.position = new Vector3(m_StartPos.transform.position.x, m_StartPos.transform.position.y, m_StartPos.transform.position.z);
+            for (int i = 0; i < amount; i++)
+            {
+                Debug.Log("Car " + i);
+                AIController car = deadAI[i].GetComponent<AIController>();
 
-            car.transform.eulerAngles = new Vector3(0, 0, 0);
+                car.transform.position = new Vector3(m_StartPos.transform.position.x, m_StartPos.transform.position.y, m_StartPos.transform.position.z);
 
-            car.SetInformation(m_InitialData[i]);
+                car.transform.eulerAngles = new Vector3(0, 0, 0);
 
-            car.Reset();
+                car.SetInformation(m_InitialData[i]);
 
-            Debug.Log("car reset" + i);
+                car.Reset();
 
-            m_AllAICont.Add(car);
-        }
+                Debug.Log("car reset" + i);
 
-        m_CurrentAICont.Clear();
+                m_AllAICont.Add(car);
+            }
 
-        for (int i = 0; i < m_AllAICont.Count; i++)
-        {
-            m_CurrentAICont.Add(m_AllAICont[i]);
+            m_CurrentAICont.Clear();
+
+            for (int i = 0; i < m_AllAICont.Count; i++)
+            {
+                m_CurrentAICont.Add(m_AllAICont[i]);
+            }
         }
     }
 
@@ -266,10 +270,6 @@ public class Game_Controller : MonoBehaviour
 
             newchildinfo += (float.Parse(childinfo.Split(',')[i]) + ((mutate) ? Random.Range(-m_MutationRate, m_MutationRate) : 0)) + (com ? "," : string.Empty);
 
-            /*if (mutation < m_MutationProbability && i != childinfo.Split(',').Length -1)
-            {
-                newchildinfo += (float.Parse(childinfo.Split(',')[i])) + Random.Range(-m_MutationRate, m_MutationRate) + ',';
-            }*/
         }
 
         Debug.Log(newchildinfo);
@@ -390,6 +390,11 @@ public class Game_Controller : MonoBehaviour
            // Debug.Log("check 4");
         }
 
+    }
+
+    public int GetGeneration()
+    {
+        return Generation;
     }
 
 }
